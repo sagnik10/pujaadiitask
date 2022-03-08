@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zoom in background cover</title>
+    <style>
+        .img-box {
+            width: 100%; /* responsive width - 50% of the page or parent container */
+            overflow: hidden;
+        }
+
+        .img {
+            padding-top: 60%; /* establishes the height, keeping the proportion of the container, regardless of the width value in px */
+            background-color: orange; /* backup color to fill up the container - shows before the img is fully loaded or in case the image doesnt load */
+            background-image: url(https://picsum.photos/400/200/?image=859);
+            background-size: cover;
+            /* transition for the image to zoom in smoothly: */
+            -ms-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .img:hover {
+            /* img zoom in on hover (x, y): */
+            -ms-transform: scale(1.1, 1.1);
+            -webkit-transform: scale(1.1, 1.1);
+            -moz-transform: scale(1.1, 1.1);
+            -o-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+        }
+    </style>
+</head>
+<body>
+<div class="img-box">
+    <div class="img"></div>
+</div>
+</body>
+</html>
